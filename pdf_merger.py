@@ -31,6 +31,17 @@ def get_direct ():
     except:
         print("Directory does not exist")
 
+def rename_file():
+    answer = input ("Rename file ")
+    if (answer=='yes'):
+        ans = input ("Enter file name ")
+        try:
+            os.rename('merged-pdf.pdf',ans)
+        except:
+            print("invalid file name")
+
+
 get_direct()
 get_files()
 pdf_merger()
+rename_file()
